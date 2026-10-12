@@ -104,14 +104,6 @@
 .scroll-hint span { position: absolute; top: 7px; left: 50%; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--fg); animation: wheel 1.8s ease-in-out infinite; }
 @keyframes wheel { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(12px); } }
 
-/* --- marquee --- */
-
-.marquee { overflow: hidden; border-block: 1px solid rgba(250, 242, 227, .1); padding: 18px 0; background: #031629; }
-.marquee .track { display: flex; width: max-content; gap: 34px; animation: slide 30s linear infinite; }
-.marquee span { font-weight: 800; font-size: clamp(1.4em, 3vw, 2.2em); letter-spacing: .12em; color: transparent; -webkit-text-stroke: 1px rgba(250, 242, 227, .45); }
-.marquee i { font-style: normal; color: var(--link); font-size: 1.6em; align-self: center; }
-@keyframes slide { to { transform: translateX(-50%); } }
-
 /* --- sections --- */
 
 .section { padding: 130px 0; position: relative; }
@@ -200,7 +192,7 @@
   .tag { margin-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg::before, .marquee .track, .orb, .q, .explore svg, .scroll-hint span { animation: none; }
+  .hero-bg::before, .orb, .q, .explore svg, .scroll-hint span { animation: none; }
   .split .line > span, .fade-late { animation: none; transform: none; opacity: 1; }
   .reveal { opacity: 1; translate: none; transition: none; }
   .flash.on { animation: none; }
