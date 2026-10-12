@@ -1,0 +1,190 @@
+/* Studio home page. Builds on style.css (colours and base type). */
+
+.home main { max-width: none; padding: 0; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* --- top bar --- */
+
+.topbar {
+  position: absolute; inset: 0 0 auto 0; z-index: 3;
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1120px; margin: 0 auto; padding: 22px 20px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-weight: 700; letter-spacing: .02em; }
+.brand svg { width: 30px; height: 30px; }
+.topbar nav { display: flex; gap: 22px; }
+.topbar nav a { color: var(--muted); text-decoration: none; font-size: .95em; }
+.topbar nav a:hover { color: var(--fg); }
+
+/* --- hero --- */
+
+.hero-full {
+  position: relative; overflow: hidden;
+  min-height: min(92vh, 860px);
+  display: flex; align-items: center;
+  background: #020f1f;
+  isolation: isolate;
+}
+.hero-full .backdrop {
+  position: absolute; inset: 0; z-index: -3;
+  background: url("img/hero.webp") center 60% / cover no-repeat;
+  opacity: .55;
+  transform: scale(1.06);
+}
+.hero-full::after {
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(2,15,31,.75) 0%, rgba(2,15,31,.25) 45%, var(--bg) 100%),
+    radial-gradient(900px 500px at 20% 40%, rgba(10,70,104,.55), transparent 70%);
+}
+.hero-full canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
+.flash {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(1000px 600px at 70% 10%, rgba(200,225,255,.35), transparent 70%);
+  opacity: 0;
+}
+.flash.on { animation: flash 1.4s ease-out; }
+@keyframes flash { 0% { opacity: 0; } 6% { opacity: 1; } 12% { opacity: .2; } 18% { opacity: .8; } 100% { opacity: 0; } }
+
+.hero-full > .wrap { width: 100%; }
+.hero-copy { max-width: 640px; padding: 120px 0 80px; }
+.eyebrow {
+  display: inline-block; font-size: .78em; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--link); margin-bottom: 18px;
+}
+.hero-copy h1 { font-size: clamp(2.6em, 7vw, 4.6em); line-height: 1.02; letter-spacing: -.025em; margin: 0 0 22px; }
+.hero-copy p { font-size: clamp(1.05em, 2.2vw, 1.25em); color: var(--muted); margin: 0 0 32px; max-width: 34em; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.button.ghost { background: transparent; color: var(--fg); border: 1px solid rgba(250,242,227,.35); }
+.button.ghost:hover { border-color: var(--fg); }
+
+/* --- sections --- */
+
+.block { padding: 96px 0; overflow-x: clip; }
+.block-head { max-width: 640px; margin-bottom: 44px; }
+.block-head h2 { font-size: clamp(1.8em, 4vw, 2.6em); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 14px; }
+.block-head p { color: var(--muted); font-size: 1.1em; margin: 0; }
+
+/* --- Rainlit feature --- */
+
+.product {
+  display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center;
+}
+.product-title { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.product-title img { width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.product-title h3 { margin: 0; font-size: 1.9em; letter-spacing: -.01em; }
+.product-title span { color: var(--muted); font-size: .95em; }
+.product > div > p { color: var(--muted); font-size: 1.08em; margin: 0 0 26px; }
+
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px; }
+.feature {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 14px; border-radius: 14px;
+  background: rgba(10,46,79,.6); border: 1px solid var(--line);
+}
+.feature svg { flex: none; width: 22px; height: 22px; color: var(--link); margin-top: 2px; }
+.feature b { display: block; font-size: .98em; }
+.feature small { color: var(--muted); font-size: .88em; line-height: 1.4; display: block; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px; font-size: .9em;
+  background: rgba(10,46,79,.6); border: 1px solid var(--line); color: var(--muted);
+}
+
+/* phone mock-up with crossfading screens */
+.stage { position: relative; display: flex; justify-content: center; }
+.stage::before {
+  content: ""; position: absolute; width: 120%; aspect-ratio: 1; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgba(26,110,160,.45), transparent);
+  z-index: -1;
+}
+.phone {
+  position: relative; width: min(300px, 70vw); aspect-ratio: 9 / 20;
+  border-radius: 42px; padding: 10px;
+  background: linear-gradient(160deg, #1d3550, #08182b);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 33px; overflow: hidden; background: #000; }
+.phone .screen img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.phone .screen img.on { opacity: 1; }
+.dots { position: absolute; bottom: -34px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; }
+.dots button {
+  width: 8px; height: 8px; padding: 0; border-radius: 99px; border: 0; cursor: pointer;
+  background: rgba(250,242,227,.3); transition: width .3s, background .3s;
+}
+.dots button.on { width: 22px; background: var(--fg); }
+
+/* --- scenes --- */
+
+.scenes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.scene {
+  position: relative; margin: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 3 / 4;
+  border: 1px solid var(--line); background: #000;
+}
+.scene img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+.scene:hover img { transform: scale(1.05); }
+.scene figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 40px 16px 14px;
+  background: linear-gradient(transparent, rgba(2,12,24,.9));
+}
+.scene figcaption b { display: block; font-size: 1.05em; }
+.scene figcaption small { color: var(--muted); }
+
+/* --- values --- */
+
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.value { padding: 26px; border-radius: 18px; background: var(--bg-raised); border: 1px solid var(--line); }
+.value svg { width: 28px; height: 28px; color: var(--link); margin-bottom: 14px; }
+.value h3 { margin: 0 0 6px; font-size: 1.15em; }
+.value p { margin: 0; color: var(--muted); font-size: .98em; }
+
+/* --- coming next + contact --- */
+
+.next {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.panel {
+  padding: 32px; border-radius: 22px; border: 1px solid var(--line);
+  background: linear-gradient(160deg, var(--bg-raised), rgba(10,46,79,.35));
+}
+.panel h3 { margin: 0 0 8px; font-size: 1.4em; }
+.panel p { margin: 0 0 20px; color: var(--muted); }
+.panel .mail { font-size: 1.15em; font-weight: 600; color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); }
+.panel .mail:hover { border-color: var(--fg); }
+
+.site-footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .92em; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+.site-footer a { color: var(--muted); }
+
+/* --- reveal on scroll --- */
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* --- responsive --- */
+
+@media (max-width: 900px) {
+  .product { grid-template-columns: 1fr; gap: 64px; }
+  .stage { order: -1; }
+  .scenes { grid-template-columns: 1fr 1fr; }
+  .values, .next { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .topbar nav { display: none; }
+  .block { padding: 72px 0; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .scenes { gap: 10px; }
+  .panel { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .phone .screen img, .scene img { transition: none; }
+  .flash.on { animation: none; }
+}
