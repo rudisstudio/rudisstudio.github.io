@@ -4,175 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rudis Studio</title>
-<meta name="description" content="Rudis Studio is a small independent studio making calm, private apps and games. Our first app, Rainlit, plays real rain for sleep, rest and focus.">
-<meta name="theme-color" content="#041d39">
+<meta name="description" content="Rudis Studio is an independent studio making calm apps and games.">
+<meta name="theme-color" content="#020f1f">
 <meta property="og:title" content="Rudis Studio">
-<meta property="og:description" content="Small apps and games, made with care. Meet Rainlit: real rain for quiet nights.">
+<meta property="og:description" content="Building calm worlds. An independent studio making apps and games.">
 <meta property="og:image" content="img/hero.webp">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="home.css?v=4">
 </head>
 <body class="home">
-<main>
 
-<header class="topbar">
-  <a class="brand" href="./" aria-label="Rudis Studio home">
-    <!-- the rudis: the wooden sword a gladiator was given with his freedom -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Rudis Studio">
     <svg viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.5"/>
-      <path d="M16 4.5 L18.2 8 V19 H13.8 V8 Z" fill="currentColor"/>
-      <rect x="10" y="19" width="12" height="2.4" rx="1.2" fill="currentColor"/>
-      <rect x="14.8" y="21.4" width="2.4" height="4.6" rx="1" fill="currentColor"/>
-      <circle cx="16" cy="27.2" r="1.6" fill="currentColor"/>
+      <path d="M16 3.5 L18.4 7.4 V19 H13.6 V7.4 Z" fill="currentColor"/>
+      <rect x="9.5" y="19" width="13" height="2.6" rx="1.3" fill="currentColor"/>
+      <rect x="14.7" y="21.6" width="2.6" height="5" rx="1" fill="currentColor"/>
+      <circle cx="16" cy="28" r="1.8" fill="currentColor"/>
     </svg>
-    Rudis Studio
+    <span>RUDIS</span>
   </a>
   <nav>
-    <a href="#rainlit">Rainlit</a>
-    <a href="#studio">Studio</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#work">Our work</a>
+    <a href="#pillars">Pillars</a>
   </nav>
+  <a class="nav-cta" href="#contact">Contact</a>
 </header>
 
-<section class="hero-full">
-  <div class="backdrop" aria-hidden="true"></div>
+<main id="top">
+
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
   <canvas id="rain" aria-hidden="true"></canvas>
   <div class="flash" id="flash" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="hero-copy">
-      <span class="eyebrow">Independent studio</span>
-      <h1>Calm things,<br>carefully made.</h1>
-      <p>Rudis Studio makes small apps and games that respect your time and your privacy. No clutter, no tracking, no tricks. Just the thing itself, done well.</p>
-      <div class="cta">
-        <a class="button" href="#rainlit">Meet Rainlit</a>
-        <a class="button ghost" href="#contact">Get in touch</a>
+  <div class="floaters" id="floaters" aria-hidden="true">
+    <div class="floater f1" data-depth="0.6"><img src="img/scene-window.webp" alt=""></div>
+    <div class="floater f2" data-depth="1.1"><img src="img/scene-storm.webp" alt=""></div>
+    <div class="floater f3" data-depth="0.8"><img src="img/scene-tent.webp" alt=""></div>
+    <div class="floater f4" data-depth="1.3"><img src="img/scene-forest.webp" alt=""></div>
+  </div>
+  <div class="hero-inner">
+    <h1 class="wordmark split" aria-label="Rudis Studio">
+      <span class="line"><span>RUDIS</span></span>
+    </h1>
+    <p class="hero-sub fade-late">BUILDING CALM WORLDS</p>
+    <a class="explore fade-late" href="#about">
+      Explore
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>RAIN</span><i>•</i><span>CALM</span><i>•</i><span>FOCUS</span><i>•</i><span>PLAY</span><i>•</i><span>CRAFT</span><i>•</i>
+    <span>RAIN</span><i>•</i><span>CALM</span><i>•</i><span>FOCUS</span><i>•</i><span>PLAY</span><i>•</i><span>CRAFT</span><i>•</i>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="container narrow center">
+    <p class="kicker reveal">About us</p>
+    <p class="statement reveal">
+      Rudis Studio makes <em>small, calm</em> apps and games. Thoughtful details, no clutter,
+      and respect for the people who use them.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="container">
+    <p class="kicker reveal">Our work</p>
+    <div class="cards">
+      <article class="card tilt reveal" data-scenes>
+        <div class="card-art">
+          <img class="on" src="img/scene-window.webp" alt="">
+          <img src="img/scene-storm.webp" alt="" loading="lazy">
+          <img src="img/scene-tent.webp" alt="" loading="lazy">
+          <img src="img/scene-forest.webp" alt="" loading="lazy">
+        </div>
+        <div class="card-body">
+          <img class="app-icon" src="img/rainlit-icon.png" alt="Rainlit icon">
+          <div>
+            <h2>RAINLIT</h2>
+            <p>Real rain sounds for sleep and focus.</p>
+          </div>
+          <span class="tag">Coming soon</span>
+        </div>
+        <span class="glow" aria-hidden="true"></span>
+      </article>
+
+      <article class="card tilt soon reveal">
+        <div class="card-art mystery" aria-hidden="true">
+          <div class="orb"></div><div class="orb b"></div><div class="orb c"></div>
+          <span class="q">?</span>
+        </div>
+        <div class="card-body">
+          <div>
+            <h2>NEXT GAME</h2>
+            <p>In the works. Stay tuned.</p>
+          </div>
+          <span class="tag">In development</span>
+        </div>
+        <span class="glow" aria-hidden="true"></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pillars">
+  <div class="container">
+    <p class="kicker reveal">Our pillars</p>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="num">01</span>
+        <h3>CRAFT</h3>
+        <p>Every detail matters. We ship things that feel finished.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">02</span>
+        <h3>CALM</h3>
+        <p>No noise, no tricks. Experiences that give time back.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">03</span>
+        <h3>TRUST</h3>
+        <p>Private by default. We only collect what we truly need.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block" id="rainlit">
-  <div class="wrap product">
-    <div class="reveal">
-      <div class="product-title">
-        <img src="img/rainlit-icon.png" alt="Rainlit app icon">
-        <div>
-          <h3>Rainlit</h3>
-          <span>Rain sounds &amp; sleep · Android</span>
-        </div>
-      </div>
-      <p>Real recorded rain, layered and slowly shifting, so it sounds like a night that keeps going rather than a short loop. Pick a place, shape the mix, and let it play while you sleep, rest or work.</p>
-
-      <div class="feature-grid">
-        <div class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 21V14M4 10V3M12 21V12M12 8V3M20 21V16M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
-          <div><b>Mix every layer</b><small>Glass, street, tarp, pines: set each one yourself.</small></div>
-        </div>
-        <div class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
-          <div><b>Thunder &amp; lightning</b><small>The screen flashes with every thunder clap.</small></div>
-        </div>
-        <div class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg>
-          <div><b>3D sound</b><small>With headphones, the rain surrounds you.</small></div>
-        </div>
-        <div class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <div><b>Sleep timer</b><small>Fades out gently at the time you choose.</small></div>
-        </div>
-      </div>
-
-      <div class="badges">
-        <span class="button soon">Coming soon to Google Play</span>
-        <span class="pill">Offline</span>
-        <span class="pill">No ads</span>
-        <span class="pill">No tracking</span>
-      </div>
-    </div>
-
-    <div class="stage reveal">
-      <div class="phone">
-        <div class="screen" id="screens">
-          <img class="on" src="img/rainlit-window.webp" alt="Rainlit: By the Window, rain drops on the glass over a night city">
-          <img src="img/rainlit-storm.webp" alt="Rainlit: Distant Storm, lit by lightning" loading="lazy">
-          <img src="img/rainlit-mix.webp" alt="Rainlit: the Mix panel with a slider for each layer" loading="lazy">
-          <img src="img/rainlit-tent.webp" alt="Rainlit: Tent at Night with the sleep timer running" loading="lazy">
-          <img src="img/rainlit-forest.webp" alt="Rainlit: Forest Rain" loading="lazy">
-        </div>
-        <div class="dots" id="dots"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block" style="padding-top:24px">
-  <div class="wrap">
-    <div class="block-head reveal">
-      <h2>Four places to listen from.</h2>
-      <p>Each soundscape has its own painted scene and its own recordings, built in layers you can shape.</p>
-    </div>
-    <div class="scenes">
-      <figure class="scene reveal"><img src="img/scene-window.webp" alt="" loading="lazy"><figcaption><b>By the Window</b><small>Glass, street, a downpour</small></figcaption></figure>
-      <figure class="scene reveal"><img src="img/scene-storm.webp" alt="" loading="lazy"><figcaption><b>Distant Storm</b><small>Heavy rain and thunder</small></figcaption></figure>
-      <figure class="scene reveal"><img src="img/scene-tent.webp" alt="" loading="lazy"><figcaption><b>Tent at Night</b><small>Canvas, tarp, the woods</small></figcaption></figure>
-      <figure class="scene reveal"><img src="img/scene-forest.webp" alt="" loading="lazy"><figcaption><b>Forest Rain</b><small>Pines, drips, big drops</small></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="studio">
-  <div class="wrap">
-    <div class="block-head reveal">
-      <h2>How we work.</h2>
-      <p>A rudis was the wooden sword a gladiator received with his freedom. We took the name as a reminder to build on our own terms.</p>
-    </div>
-    <div class="values">
-      <div class="value reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        <h3>Private by default</h3>
-        <p>Our apps collect nothing they do not need. Rainlit collects nothing at all and never goes online.</p>
-      </div>
-      <div class="value reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 12h3l3-8 4 16 3-8h7"/></svg>
-        <h3>Calm, not noisy</h3>
-        <p>No pop-ups, no streak guilt, no dark patterns. Open the app, use it, put it down.</p>
-      </div>
-      <div class="value reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v6c0 4.5 3.4 7.6 8 8.5 4.6-.9 8-4 8-8.5V7z"/><path d="m9 12 2 2 4-4"/></svg>
-        <h3>Small and finished</h3>
-        <p>We would rather ship one thing that is complete than ten that are almost there.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="contact" style="padding-top:24px">
-  <div class="wrap next">
-    <div class="panel reveal">
-      <span class="eyebrow">Coming next</span>
-      <h3>Games are on the way.</h3>
-      <p>We are working on a few games built with the same care. They will appear here first.</p>
-    </div>
-    <div class="panel reveal">
-      <span class="eyebrow">Contact</span>
-      <h3>Say hello.</h3>
-      <p>Questions, feedback or a bug in one of our apps: we read every message.</p>
-      <a class="mail" href="mailto:rudisstudio@gmail.com">rudisstudio@gmail.com</a>
-    </div>
+<section class="section contact" id="contact">
+  <div class="container narrow center">
+    <p class="kicker reveal">Contact</p>
+    <h2 class="big reveal">Let’s talk.</h2>
+    <a class="mail reveal" href="mailto:rudisstudio@gmail.com">rudisstudio@gmail.com</a>
   </div>
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
+<footer class="footer">
+  <div class="container">
     <span>© 2026 Rudis Studio</span>
-    <span><a href="rainlit/privacy/">Rainlit privacy policy</a></span>
+    <a href="rainlit/privacy/">Rainlit privacy policy</a>
   </div>
 </footer>
 
-<script src="site.js"></script>
+<script src="site.js?v=4"></script>
 </body>
 </html>
