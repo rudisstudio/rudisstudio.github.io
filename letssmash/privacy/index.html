@@ -7,18 +7,19 @@
 <body><main>
 <p><a href="../../">← Rudis Studio</a></p>
 <h1>Let's Smash privacy policy</h1>
-<p class="muted"><strong>Effective date:</strong> 11 November 2026</p>
+<p class="muted"><strong>Effective date:</strong> 12 November 2026</p>
 <p>Let's Smash ("the game") is made by Rudis Studio ("we"). This policy explains what happens to your information when you play Let's Smash on Android.</p>
 
 <p>Your use of the game is also covered by the <a href="../../terms/">Rudis Studio terms of use</a>.</p>
 
 <h2>In short</h2>
-<p>We do not run any servers, the game needs no account, and we do not sell any personal information. The game shows rewarded ads from Google AdMob only when you choose to watch one, and has no analytics or tracking of its own. You can buy coins and bundles with real money; Google Play handles the payment, and the in-app purchase software from Unity that is built into the game sends Unity a record of each purchase, as described below. Apart from purchases and ads, the game plays fully offline.</p>
+<p>We do not run any servers, the game needs no account, and we do not sell any personal information. The game shows rewarded ads from Google AdMob only when you choose to watch one. It uses Google Firebase to send us gameplay statistics and crash reports, which are not linked to your name, email address or advertising ID. You can buy coins and bundles with real money; Google Play handles the payment, and the in-app purchase software from Unity that is built into the game sends Unity a record of each purchase, as described below. Apart from purchases and ads, the game plays fully offline.</p>
 
 <h2>Information we collect</h2>
-<p>The game does not send us your name, email address, location, contacts, usage statistics or crash reports, and we cannot see how you play. We receive information about you only in two cases:</p>
+<p>The game does not send us your name, email address, precise location or contacts. We receive information only in these cases:</p>
 <ul>
 <li><strong>When you buy something:</strong> Google Play gives us the order records we need for refunds and our accounts, such as the order number, the item, the price and the country of purchase. We do not receive your payment card details.</li>
+<li><strong>When you play:</strong> gameplay statistics and crash reports, through Google Firebase, as described under "Gameplay statistics and crash reports".</li>
 <li><strong>When you email us:</strong> see "Contacting support" below.</li>
 </ul>
 <p>What Unity receives when you buy something is described under "In-app purchases".</p>
@@ -46,6 +47,19 @@
 </ul>
 <p>Unity's servers may also estimate your approximate location (your country) from your IP address. Unity uses this information to run its in-app purchase service and for analytics about it. Unity sends these records whenever a purchase is made; there is no setting in the game to turn them off, so if you do not want them sent, please do not make purchases. They do not include your name, your email address, your payment details or your advertising ID. We do not receive this information from Unity. Unity handles it under the <a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>.</p>
 
+<h2>Gameplay statistics and crash reports</h2>
+<p>The game uses two Google services, Firebase Analytics and Firebase Crashlytics, to tell us how the levels play and when the game crashes, so that we can fix problems and balance the levels. Google runs them for us. Both need an internet connection and send their data encrypted in transit.</p>
+<p><strong>Firebase Analytics</strong> sends:</p>
+<ul>
+<li>what happens in the game: when you start, win or lose a level, with the level number and its difficulty, whether you used the rocket booster, the coins a win paid, whether you took a continue offer, and when you start, finish or cancel a purchase, with the item and where in the game you bought it;</li>
+<li>events Firebase records on its own, such as the first time the game is opened, when a play session starts, how long the game is in use, and which screen is showing;</li>
+<li>an app instance identifier that Firebase creates for the game on your phone;</li>
+<li>technical details: the device model, the operating system version, the game's version, the language and your approximate location (country or region) estimated from your IP address.</li>
+</ul>
+<p><strong>Firebase Crashlytics</strong> sends a report when the game crashes or hits an error: what the game was doing when it failed (a technical trace of the code), the device model, the operating system and game versions, the free memory and storage, the time of the crash and an installation identifier that Crashlytics creates for the game on your phone.</p>
+<p>The game does not give Firebase your name, email address, progress save or advertising ID: it turns off Firebase's collection of the advertising ID and does not allow this information to be used for ads. We do not use it to identify you, and we do not share it with advertisers. Google handles it as our service provider, under the <a href="https://firebase.google.com/support/privacy">Firebase privacy and security information</a> and <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+<p>These statistics and crash reports are sent whatever you choose in the ad consent form; there is no setting in the game to turn them off. Uninstalling the game, or clearing its storage in Android's settings, stops them and replaces the identifiers with new ones.</p>
+
 <h2>Ads</h2>
 <p>Let's Smash shows only rewarded ads, and only when you ask for one: to get an extra life when you have run out, or an extra use of the rocket booster. There are no banner ads and no ads that interrupt play. You can play the whole game without watching any ads, and players who have bought anything in the game are not offered ads.</p>
 <p>The ads are served by Google AdMob, through the Google Mobile Ads SDK built into the app. When the app starts and has an internet connection, this SDK connects to Google and prepares an ad, even if you never watch one. To do this, Google collects and shares the following information automatically, encrypted in transit:</p>
@@ -69,15 +83,15 @@
 <p>Let's Smash asks Android for these permissions:</p>
 <ul>
 <li><strong>Vibration:</strong> gives short buzzes when the cannon fires, when a rocket or TNT crate goes off, and when you win. The vibration effects run on your phone and send nothing. You can turn vibration off in the game's Settings.</li>
-<li><strong>Internet and network state:</strong> used for in-app purchases and ads, to reach Google Play and Google's ad servers and to check whether the phone is online.</li>
+<li><strong>Internet and network state:</strong> used for in-app purchases, ads, gameplay statistics and crash reports, to reach Google Play, Google's ad servers and Firebase, and to check whether the phone is online.</li>
 <li><strong>Google Play billing:</strong> lets the game offer purchases through Google Play.</li>
 <li><strong>Advertising ID:</strong> lets Google's ad software read the Android advertising ID, as described under Ads.</li>
-<li>A few system permissions added by the ad software for its own work, such as Android's ad services (Privacy Sandbox) and keeping short background tasks running.</li>
+<li>A few system permissions added by Google's ad and Firebase software for its own work, such as Android's ad services (Privacy Sandbox) and keeping short background tasks running.</li>
 </ul>
 <p>The game does not use your precise location, your camera, your microphone, your contacts or your files.</p>
 
 <h2>Third parties</h2>
-<p>Besides the purchase software and Google's ad software described above, Let's Smash contains no third-party analytics or tracking code. It is built with the Unity game engine, made by Unity Technologies. When the game starts with an internet connection, the engine may send Unity a small set of technical information, such as the device model, operating system, screen and graphics hardware, and the engine version. This does not include your name or your progress in the game, and we do not receive it. Unity handles it under the <a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>.</p>
+<p>Besides the purchase software, Google's ad software and Firebase described above, Let's Smash contains no third-party analytics or tracking code. It is built with the Unity game engine, made by Unity Technologies. When the game starts with an internet connection, the engine may send Unity a small set of technical information, such as the device model, operating system, screen and graphics hardware, and the engine version. This does not include your name or your progress in the game, and we do not receive it. Unity handles it under the <a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>.</p>
 <p>When you download the game from Google Play, Google may collect information as part of providing the store, under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
 <h2>Children</h2>
@@ -86,10 +100,11 @@
 <h2>Deleting your data</h2>
 <p>Uninstalling the game deletes everything it saved on your phone. We delete your support emails on request. We keep Google Play's order records only as long as we need them for refunds and our accounts, or as the law requires.</p>
 <p>The purchase records described under "In-app purchases" are held by Unity, not by us; the game cannot delete them. To ask Unity about them, or to ask for their deletion, follow the instructions in the <a href="https://unity.com/legal/privacy-policy">Unity privacy policy</a>. If you need help, email us and we will help you make the request. Your Google Play purchase history is managed in your Google account.</p>
+<p>Gameplay statistics and crash reports are kept in Firebase only as long as we need them to improve the game, and Google deletes them after the retention period we set. They are linked only to the identifiers described above, not to your name or email address, so we cannot find the data of one player; uninstalling the game or clearing its storage gives it new identifiers, so new data is no longer linked to the old.</p>
 <p>Information Google collects for ads is held by Google; you can reset or delete your advertising ID in your phone's settings, and manage it under Google's privacy policy.</p>
 
 <h2>Changes to this policy</h2>
-<p>If a future version changes how information is handled, for example by adding crash reporting, analytics or another ad partner, we will update this policy and its effective date before that version is released.</p>
+<p>If a future version changes how information is handled, for example by adding another ad partner or analytics service, we will update this policy and its effective date before that version is released.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: Rudis Studio, <a href="mailto:rudisstudio@gmail.com">rudisstudio@gmail.com</a></p>
